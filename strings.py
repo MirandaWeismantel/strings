@@ -67,18 +67,12 @@ def strip_newlines(list_of_strings):
 
     return result
 
+def find_vowel_indices(s, letters):
 
-# TODO: Generalize this function to find arbitrary letter indices
-def find_vowel_indices(s):
-    vowels = ["a", "e", "i", "o", "u"]
-
-    # Fuck it...
-    vowels += ["y"]
-
-    result = {v: [] for v in vowels}
-    for vowel in vowels:
+    result = {v: [] for v in letters}
+    for letter in letters:
         for i, char in enumerate(s):
-            if char in vowels:
-                result[vowel].append(i)
+            if char in letters:
+                result[letter].append(i)
 
     return result
